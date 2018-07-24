@@ -1,0 +1,35 @@
+
+
+  <div class="container">
+
+    <br><br>
+    <h1 class="header center orange-text">Здарова НАРОД!</h1>
+
+    <div class="row center">
+      <a href="#" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+    </div>
+    <br><br>
+
+  </div>
+
+<div class="container">
+  <div class="section">
+
+    <!--   Icon Section   -->
+    <div class="row">
+
+
+      <app-user
+      *ngFor="let u of users"
+      [user]="u"
+      ></app-user>
+
+
+
+  </div>
+    <app-cars></app-cars>
+  <br><br>
+</div>
+</div>
+
+
