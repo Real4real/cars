@@ -6,41 +6,17 @@ import { Component} from '@angular/core';
   styleUrls: ['./cars.component.css']
 })
 export class CarsComponent {
-
-  addCarStatus = false;
-  cars = ['Ford','Audi', 'Tesla','Infinity','Kama'];
-  // items = [{id: 3, name: 'item 2'},{id: 5, name: 'item 13'},{id: 2, name: 'item 666'}];
-  inputText = '';
-  inputText2 = '';
   carName = '';
-
-  // constructor() {
-  //   setTimeout(()=>{
-  //     this.canAddCar = true;
-  //   },4000)
-  // }
+  carYear = 2017;
+  cars = [{name: 'Ford', year: 2007}, {name: 'Mazda', year: 2001}, {name: 'Audi', year: 2003}];
+  constructor() {
+  }
   addCar() {
-    this.addCarStatus = true;
-    this.cars.push(this.carName);
-    this.carName = '';
+    this.cars.push({
+      name: this.carName,
+      year: this.carYear
+    });
+    // this.carName = '';
+    // this.carYear = 2017;
   }
-
-  onKeyUp(value) {
-    // console.log(event);
-    this.inputText = value;
-  }
-
-  // onKeyUp2(event) {
-  //
-  //   // console.log(event);
-  //   this.inputText2 = event.target.value;
-  //   this.za = event.target.value;
-  // }
-
-  onKeyUp3(value) {
-    // console.log(event);
-    this.inputText2 = value;
-  }
-
-
 }
